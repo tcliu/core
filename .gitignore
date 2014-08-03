@@ -25,6 +25,7 @@ lib_managed
 *.idea
 
 # Other files
+db
 log
 logs
 out
