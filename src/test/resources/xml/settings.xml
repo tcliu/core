@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<settings>
+
+	<master id="a">
+		<file-name>happy</file-name>
+		<size>30</size>
+	</master>
+	
+	<slave id="b" inherits="a">
+	
+	</slave>
+	
+	<slave id="c">
+		<name>123</name>
+	</slave>
+
+
+</settings>
