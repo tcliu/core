@@ -10,9 +10,9 @@ version = '1.0.0'
 sourceCompatibility = JavaVersion.VERSION_1_8
 		
 ext {
-	springVersion = '4.1.1.RELEASE'
-	hibernateVersion = '4.3.6.Final'
-	scalaVersion = '2.11.2'
+	springVersion = '4.1.2.RELEASE'
+	hibernateVersion = '4.3.7.Final'
+	scalaVersion = '2.11.4'
 	slf4jVersion = '1.7.7'
 }
 
@@ -28,7 +28,7 @@ repositories {
 dependencies {
 	// Scala
 	compile("org.scala-lang:scala-library:$scalaVersion")
-	compile("org.scala-lang.modules:scala-xml_2.11:1.0.2")
+	// compile("org.scala-lang.modules:scala-xml_2.11:1.0.2")
 	compile("com.jsuereth:scala-arm_2.11:1.4")
 	// Apache Commons
 	compile("org.apache.commons:commons-lang3:3.3.2")
@@ -50,10 +50,10 @@ dependencies {
 	compile("org.springframework:spring-web:$springVersion")
 	compile("org.springframework:spring-webmvc:$springVersion")
 	compile("org.springframework:spring-websocket:$springVersion")
-	// compile("org.springframework.data:spring-data-jpa:1.6.0.RELEASE")
-    compile('org.springframework.batch:spring-batch-core:3.0.1.RELEASE')
+	// compile("org.springframework.data:spring-data-jpa:1.7.1.RELEASE")
+    compile('org.springframework.batch:spring-batch-core:3.0.2.RELEASE')
 	// Data conversion
-	compile("com.fasterxml.jackson.core:jackson-databind:2.4.2")
+	compile("com.fasterxml.jackson.core:jackson-databind:2.4.3")
 	compile("org.apache.poi:poi:3.10.1")
 	compile("org.apache.poi:poi-ooxml:3.10.1")
 	compile("net.sf.opencsv:opencsv:2.3")
@@ -65,22 +65,22 @@ dependencies {
 		exclude module: 'slf4j-simple'
 	}
 	// Selenium
-	compile("org.seleniumhq.selenium:selenium-java:2.43.1")
-	// compile("org.seleniumhq.selenium:selenium-server:2.43.1")
-	compile("org.apache.httpcomponents:httpcore:4.3.2")
+	compile("org.seleniumhq.selenium:selenium-java:2.44.0")
+	// compile("org.seleniumhq.selenium:selenium-server:2.44.0")
+	compile("org.apache.httpcomponents:httpcore:4.3.3")
 	// HTML Parser
 	compile("org.jsoup:jsoup:1.8.1")
 	// Hibernate
 	compile("org.hibernate:hibernate-core:$hibernateVersion")
 	compile("org.hibernate:hibernate-entitymanager:$hibernateVersion")
-	compile("org.hibernate:hibernate-validator:5.1.1.Final")
+	compile("org.hibernate:hibernate-validator:5.1.3.Final")
 	compile("org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final")
 	compile("org.mongodb:mongo-java-driver:2.12.3")
 	runtime("org.javassist:javassist:3.18.2-GA")
 	// JDBC
 	runtime("com.oracle:ojdbc7:12.1.0.1")
 	runtime("org.hsqldb:hsqldb:2.3.2")
-	runtime("com.h2database:h2:1.4.181")
+	runtime("com.h2database:h2:1.4.182")
 	// Logging
 	compile("org.slf4j:slf4j-api:$slf4jVersion")
 	compile("org.slf4j:slf4j-ext:$slf4jVersion")
