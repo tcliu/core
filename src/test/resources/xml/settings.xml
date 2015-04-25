@@ -1,18 +1,56 @@
 <?xml version="1.0" ?>
 <settings>
-
-	<master id="a">
-		<file-name>happy</file-name>
-		<size>30</size>
-	</master>
 	
-	<slave id="b" inherits="a">
+	<member id="grandfather">
+		<first-name>Shun</first-name>
+		<last-name>Chan</last-name>
+		<full-name>{last-name} {first-name}</full-name>
+		<gender>Male</gender>
+		<dob>1938-04-12</dob>
+		<blood-type>A</blood-type>
+	</member>
 	
-	</slave>
+	<member id="grandmother">
+		<first-name>Mei Mei</first-name>
+		<last-name>Wong</last-name>
+		<gender>Female</gender>
+		<dob>1940-02-03</dob>
+		<blood-type>B</blood-type>
+	</member>
 	
-	<slave id="c">
-		<name>123</name>
-	</slave>
+	<member id="father" parents="grandfather,grandmother">
+		<first-name>Tai Man</first-name>
+		<dob>1967-12-15</dob>
+		<skills>Basketball</skills>
+	</member>
+	
+	<member id="mother">
+		<first-name>Siu Bing</first-name>
+		<last-name>Lee</last-name>
+		<dob>1970-02-11</dob>
+		<skills>Singing</skills>
+		<gender>Female</gender>
+	</member>
+	
+	<member id="son" parents="father,mother">
+		<first-name>Siu Ming</first-name>
+		<last-name>first-name</last-name>
+	</member>
 
-
+	<member id="daughter" parents="mother,father" k1k="{k2k}" k2k="$key{id}">
+		<first-name>Siu Fong</first-name>
+		<dob>1982-02-01</dob>
+		<key>{{key1}1{key1}}</key>
+		<key1>k</key1>
+		<blood-type>{grandmother/{field}}</blood-type>
+		<field>dob</field>
+	</member>
+	
+	<test id="testing">
+		<cd><![CDATA[
+		A long long time ago
+		]]></cd>
+		<blood.type2>{grandmother/blood-type}</blood.type2>
+	</test>
+	
 </settings>
