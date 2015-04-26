@@ -29,5 +29,6 @@ db
 log
 logs
 out
+ignore
 .cache
 /.target

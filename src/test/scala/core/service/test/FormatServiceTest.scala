@@ -1,12 +1,10 @@
 package core.service.test
 
-import scala.beans.BeanProperty
 import org.junit.Test
+
 import core.service.FormatService
-import org.junit.runner.RunWith
-import org.springframework.test.context.ContextConfiguration
-import core.test.model.Person
 import core.test.ServiceTest
+import core.test.model.Person
 import javax.annotation.Resource
 
 class FormatServiceTest extends ServiceTest {
