@@ -13,7 +13,7 @@ class ResourceServiceTest extends ServiceTest {
 	@Resource var resourceService : ResourceService = _
 
 	@Test def testProperties {
-		val props = Seq("name", "style.less.path", "jquery.js.path")
+		val props = Seq("name")
 		props.map(s => logger.info(s"${s} = ${resourceService.getProperty("properties/app", s)}"))
 	}
 
